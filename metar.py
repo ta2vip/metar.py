@@ -1,9 +1,12 @@
+# AUTHOR TA2VIP
+
+
 import requests
 from datetime import datetime
 import re
 import time
 from datetime import datetime, timezone
-station = "LTAC"  # ICAO kodu (örneğin: LTAC - Ankara Esenboğa)
+station = "LTAC"  # INSERT ICAO CODE HERE
 
 def fetch_and_save_wx():
     try:
@@ -56,7 +59,7 @@ def fetch_and_save_wx():
     except Exception as e:
         print("Hata oluştu:", e)
 
-# Her 10 dakikada bir çalıştır
+# 10 MINS LOOP
 while True:
     fetch_and_save_wx()
     time.sleep(600)  # 600 saniye = 10 dakika
